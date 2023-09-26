@@ -1,38 +1,64 @@
-.App {
+.App{
+  
+  background-image: linear-gradient(to bottom right,  #00ffcc,  #009999);
+  color: hsl(213, 50%, 36%);
+  box-shadow:0 0 10px #e9e9e9;
+  height: 500px;
+  width: 450px;
+  display: block;
+  margin: 40px auto;
+  padding: 20px;
+  border: 2px solid #e9e9e9;
+  border-radius: 20px;
+  /* 62aa3eb2ae416c2d6443aee48644f637 */
+ 
+}
+.text-center{
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.input-box{
+  padding: 10px 15px;
+  width: 200px;
+  border-radius: 30px;
+  border: none;
+  display: block;
+  margin: 10px auto;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.img-search{
+  height: 30px;
+  margin-top: 10px;
+  /* border: 1px solid black; */
+  border-radius: 50%;
+  padding: 2px;
+  margin-left: 10px;
+  background-color: #fff;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.flex{
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+}
+.img{
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  margin: 40px auto;
+  display: block;
+}
+.temp{
+  font-size: 40px;
+ 
+  display: block;
+ 
+  text-align: center;
+}
+.city-name{
+  font-size: 30px;
+  text-align: center;
+  display: block;
+}
+.visibility{
+  text-align: end;
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
