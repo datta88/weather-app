@@ -1,7 +1,7 @@
 .App{
   
-  background-image: linear-gradient(to bottom right,  #00ffcc,  #009999);
-  color: hsl(213, 50%, 36%);
+  background-image: linear-gradient(to bottom right,   #33ff99,  #009999);
+  /* color: hsl(213, 50%, 36%); */
   box-shadow:0 0 10px #e9e9e9;
   height: 500px;
   width: 450px;
@@ -20,13 +20,15 @@
   padding: 10px 15px;
   width: 200px;
   border-radius: 30px;
-  border: none;
+  border: none ;
   display: block;
   margin: 10px auto;
+  text-decoration: none;
 }
 .input-box:hover{
-border: none;
+border: none ;
 cursor: pointer;
+text-decoration: none;
 }
 .img-search{
   height: 30px;
@@ -46,27 +48,54 @@ cursor: pointer;
 
 }
 .img{
-  height: 100px;
-  width: 100px;
+  height: 150px;
+  width: 150px;
   border-radius: 50%;
-  margin: 40px auto;
+  margin: 10px auto;
   display: block;
 }
 .temp{
   font-size: 40px;
  
   display: block;
- 
+ color: #fff;
   text-align: center;
 }
 .city-name{
   font-size: 30px;
   text-align: center;
   display: block;
+  color: #fff;
 }
 .visibility{
-  text-align: end;
+ 
+}
+.flex-around{
+  display: flex;
+  justify-content: space-between; 
   color: #fff;
+}
+.img-logo{
+  height: 60px;
+ 
+}
+.block-humidity1{
+  
+  padding: 10px;
+  margin-top: 12px;
+}
+.block-humidity2{
+  
+  padding: 5px;
+}
+.block-visibility1{
+ 
+  padding: 10px;
+  margin-top: 12px;
+}
+.block-visibility2{
+  
+  padding: 5px;
 }
 
 

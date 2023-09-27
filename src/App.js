@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './App.css';
-import Img from './Image/weather.png';
+import Img from './Image/clouds.png';
 import ImgSearch from './Image/search.png';
+import ImgHuminity from './Image/humidity.png'
+import ImgWind from './Image/wind.png'
 
 
 export default function App() {
@@ -41,39 +43,55 @@ export default function App() {
 
   return (
     <>
-    <h1 className='text-center'>Weather App </h1>
-    <div className="App">
-      <div className='flex'>
-     <div>
-     <input type='text' placeholder='Enter City Name ' value={city} onChange={(e) => {
-        setCity(e.target.value);}} className='input-box' />
-     </div>
-       <div>
-       <img src={ImgSearch} alt='React Logo' className='img-search' />
-       </div>
-      </div>
-          <img src={Img} alt='React Logo' className='img' />
-          
+      <h1 className='text-center'>Weather App </h1>
+      <div className="App">
+        <div className='flex'>
+          <div>
+            <input type='text' placeholder='Enter City Name ' value={city} onChange={(e) => {
+              setCity(e.target.value);
+            }} className='input-box' />
+          </div>
+          <div>
+            <img src={ImgSearch} alt='React Logo' className='img-search' />
+          </div>
+        </div>
+        <img src={Img} alt='React Logo' className='img' />
 
-          <p><span className='temp'>{(weatherData?.main?.temp - 273).toFixed(2)}<sup>  º </sup>c</span>  </p>
 
-      <p className='city-name'> {weatherData?.name} </p>
-     
-      {/* <p>Description : {weatherDescription} </p> */}
-      <div>
-        <p>
-          
-          <span>
-            {weatherData?.main?.humidity} %
-          </span>
-          Humidity
-          
-        </p>
+        <p><span className='temp'>{(weatherData?.main?.temp - 273).toFixed(2)}<sup>  º </sup>c</span>  </p>
+
+        <p className='city-name'> {weatherData?.name} </p>
+
+        {/* <p>Description : {weatherDescription} </p> */}
+        <div className='flex-around'>
+          <div className='flex'>
+            <div className='block-humidity1'>
+              <img src={ImgHuminity} alt='React logo' className='img-logo' />
+            </div>
+          <div className='block-humidity2'>
+            <p>
+              <span>
+                {weatherData?.main?.humidity} %
+              </span>
+              <br /><br />
+              Humidity
+            </p>
+          </div>
+          </div>
+
+          <div className='flex'>
+          <div className='block-visibility1'>
+              <img src={ImgWind} alt='React logo' className='img-logo' />
+            </div>
+          <div className='block-visibility2'>
+            <p >Visibility :{(weatherData?.visibility / 1000)}km/h</p>
+            <p >wind speed</p>
+
+          </div>
+        </div>
+          </div>
       </div>
-      <p className='visibility'>Visibility :{(weatherData?.visibility / 1000)}km/h</p>
-      <p className='visibility'>wind speed</p>
-    </div>
     </>
-    
+
   );
 }
