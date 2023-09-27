@@ -60,6 +60,16 @@ export default function App() {
       <p className='city-name'> {weatherData?.name} </p>
      
       {/* <p>Description : {weatherDescription} </p> */}
+      <div>
+        <p>
+          
+          <span>
+            {weatherData?.main?.humidity} %
+          </span>
+          Humidity
+          
+        </p>
+      </div>
       <p className='visibility'>Visibility :{(weatherData?.visibility / 1000)}km/h</p>
       <p className='visibility'>wind speed</p>
     </div>
